@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <% include partials/head.ejs %>
+  <title></title>
+</head>
+<body style="text-align: center">
+  <h1>Edit</h1>
+  <form action="/pokemon/<%index%>?_method=PUT" method="post">
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="<%=data.name%>"/><br />
+    <label for="img">Image:</label>
+    <input type="text" name="img" value="<%=data.img%>"/><br />
+    <label for="type">Type:</label>
+    <input type="text" name="type" value="<%=data.type%>"/><br />
+    <% for(let stat in data.stats) { %>
+      <label for="<%=stat%>"><%=stat.toUpperCase()%></label>
+      <input type="text" name="<%=stat%>" value="<%=data.stats[stat]%>">
+      <% } %>
+      <br/>
+      <input type="submit" />
+    </form>
+    <a href="/pokemon">Back to Pokedex</a>
+  </body>
+  </html>

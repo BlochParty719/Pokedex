@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body style="text-align: center;">
+  <h1><%=data.name%></h1>
+  <img src="<%=data.img>"
+  alt="<%=data.name%>">
+  <ul>
+    <li> type:
+      <% data.type forEach((type)) => {
+        <%=type%>
+        <%})%>
+      </li>
+      <%for(let stat in data.stats) {%>
+        <li>
+          <%=stat%>:
+          <%=data.stats{stat}%>
+        </li>
+        <%}%>
+      </ul>
+      <form class="" action="/pokemon/
+      <%=index%>?_method=DELETE" method="post">
+      <input type="submit" value="Delete this Pokemon">
+    </form>
+    <a href="/pokemon/<%=index%>/edit"
+      class="button">Edit this Pokemon</a>
+    </body>
+    </html>

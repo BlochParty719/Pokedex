@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <% include partials/Head.ejs %>
+</head>
+<body>
+  <h1>Pokedex</h1>
+  <center>
+    <a href="/pokemon/new" class="button">Create New Pokemon</a>
+  </center>
+  <p></p>
+  <div class="container">
+    <% for (let i = 0; i < data.length; i++) { %>
+      <% if (i % 6 === 0) { %>
+        <% if (i !== 0) { %>
+        </div>
+        <% } %>
+        <div class="row">
+          <% } %>
+          <div class="two columns">
+            <a href="/pokemon/<%=i%>"><img src="<%=data[i].img%>" class="pokedex"></a>
+            <% } %>
+          </div>
+        </body>
+        </html>

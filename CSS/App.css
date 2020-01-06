@@ -1,0 +1,12 @@
+h1 {
+  text-align: center;
+}
+
+img.pokedex {
+  width: 100px;
+  height: 100px;
+}
+
+.button, form {
+  margin: 0;
+}
